@@ -39,4 +39,4 @@ function calculateBtnClicked() {
     }
 }
 
-calculateBtn.addEventListener('click', calculateBtnClicked);
+calculateBtnElement.addEventListener('click', calculateBtnClicked);

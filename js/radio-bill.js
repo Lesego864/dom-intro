@@ -23,22 +23,22 @@ function radioBillTotal() {
     const checkedRadioBtn = document.querySelector(".billItemTypeRadio:checked");
     var billItemType = checkedRadioBtn.value;
     if (billItemType == "call") {
-        radioCallstotal += 2.75;
+        radioTotalCalls += 2.75;
     }
     else if (billItemType == "sms") {
-        radioSmstotal += 0.75;
+        radioTotalSms += 0.75;
     }
 
     rCallsTotalElement.innerHTML = radioTotalCalls.toFixed(2);
     rSmsTotalElement.innerHTML = radioTotalSms.toFixed(2);
-    var radioTotalCost = radioTotalCalls + radioTotalSms;
-    var number = radioTotalCost.toFixed(2);
+    var radioTotal= radioTotalCalls + radioTotalSms;
+    var number = radioTotal.toFixed(2);
     
 
-    if (radioTotalCost >= 30 && radiototalCost < 50) {
+    if (radioTotal >= 30 && radioTotal < 50) {
         totalCostElement.classList.add("warning");
     }
-    else if (radioTotalCost >= 50) {
+    else if (radioTotal >= 50) {
         totalCostElement.classList.add("danger");
         number = 50;
     }

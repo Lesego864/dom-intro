@@ -37,6 +37,8 @@ function textBillTotal() {
     var number = totalCost.toFixed(2);
 
 
+
+
     if (totalCost >= 30 && totalCost < 50) {
         totalOneElement.classList.add("warning");
     }

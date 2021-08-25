@@ -16,6 +16,8 @@ const calculateBtnElement = document.querySelector(".calculateBtn");
 const billStringElement = document.querySelector(".billString");
 const newStyle = document.querySelector(".total");
 
+
+
 function calculateBtnClicked() {
 
     var billString = billStringElement.value;
@@ -31,6 +33,8 @@ function calculateBtnClicked() {
         }
     }
     newStyle.innerHTML = "R"+billTotal;
+    newStyle.classList.remove("warning");
+    newStyle.classList.remove("danger");
     if (billTotal >= 20 && billTotal<30) {
         newStyle.classList.add("warning");
     }
